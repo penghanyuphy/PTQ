@@ -1,0 +1,15 @@
+Data:
+  Eval:
+          #cloze_eval: True
+    cloze_eval: False 
+    dataset:
+      name: GPTDataset
+      #input_dir:  /workspace/distill-gpt/PaddleFleetX/lambada_test.jsonl 
+      input_dir:  /workspace/distill-gpt/PaddleFleetX/wikitext-103/wiki.valid.tokens 
+      max_seq_len: 1024
+      overlapping_eval: 16
+    loader:
+      num_workers: 16
+      return_list: True
+      collate_fn: gpt_collate_fn
+      batch_size: 8 
